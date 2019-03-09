@@ -5,30 +5,30 @@ using UnityEngine;
 public class PlayerDetectionArea : MonoBehaviour
 {
     SkinnedMeshRenderer enemyMesh;
-    EnemyController enemyController;
 
+    [HideInInspector]
+    public bool enableTheController = false;
 
     void Start()
     {
         enemyMesh = GetComponent<SkinnedMeshRenderer>();
-        enemyController = gameObject.GetComponentInParent<EnemyController>();
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerStay(Collider collider)
     {
-        if(collider.CompareTag("PlayerFPS") || collider.CompareTag("PlayerFPS"))
+        if (collider.CompareTag("PlayerFPS") && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
             enemyMesh.enabled = true;
-            enemyController.enabled = true;
+            enableTheController = true;
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        if (collider.CompareTag("PlayerFPS") || collider.CompareTag("PlayerFPS"))
+        if (collider.CompareTag("PlayerFPS"))
         {
             enemyMesh.enabled = false;
-            enemyController.enabled = false;
+            enableTheController = false;
         }
     }
 

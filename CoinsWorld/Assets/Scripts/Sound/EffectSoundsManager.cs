@@ -14,7 +14,7 @@ public class EffectSoundsManager : MonoBehaviour
         effectsAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    void PlayerReceivedDamaged()
+    public void PlayerReceivedDamaged()
     {
         int rand = Random.Range(2, 5);
         effectsAudioSource.clip = audioToPlay[rand];
@@ -24,6 +24,13 @@ public class EffectSoundsManager : MonoBehaviour
     void CoinCollectedSound()
     {
         effectsAudioSource.clip = audioToPlay[0];
+        effectsAudioSource.Play();
+    }
+
+    public void PlayerKilled()
+    {
+        int rand = Random.Range(6, 9);
+        effectsAudioSource.clip = audioToPlay[rand];
         effectsAudioSource.Play();
     }
 }

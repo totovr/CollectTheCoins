@@ -11,6 +11,11 @@ TagManager:
   - Enemy
   - EnemyBullet
   - PlayerScripts
+  - HealthBar
+  - LifeText
+  - HealthBarAnimation
+  - EnemyMesh
+  - AllTheEnemies
   layers:
   - Default
   - TransparentFX

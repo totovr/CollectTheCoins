@@ -61,11 +61,13 @@
      <Compile Include="Assets\Scripts\Coin\CoinRotation.cs" />
      <Compile Include="Assets\Scripts\Enemy\Bullet_Attack_byEnemey.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\PlayerDetectionArea.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />
      <Compile Include="Assets\Scripts\Game\GameSceneManager.cs" />
      <Compile Include="Assets\Scripts\Game\GlobalStaticVariables.cs" />
      <Compile Include="Assets\Scripts\Player\BulletGenerator.cs" />
+     <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Player\HitPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\InputController.cs" />
      <Compile Include="Assets\Scripts\Player\KillPlayer.cs" />

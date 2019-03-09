@@ -14,7 +14,6 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     // Actual GameState
-    [HideInInspector]
     public GameState currentGameState;
 
     // singleton
@@ -26,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Canvas gameOverCanvas;
     public Canvas gameWonCanvas;
 
-    public bool theGameStart = false;
+    public bool theGameStart = false; // this is used to start the coins 
 
     void Awake()
     {
@@ -37,7 +36,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentGameState = GameState.menu;
-
         // Setup the canvas behaviour
         menuCanvas.enabled = true;
         gameCanvas.enabled = false;
@@ -54,17 +52,18 @@ public class GameManager : MonoBehaviour
             QuitTheGame();
         }
 
+        // This will display the menu if is the first time of the player in the game
         if (currentGameState != GameState.inTheGame && currentGameState != GameState.wonTheGame && GlobalStaticVariables.theUserResetTheGame == false)
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
                 StartGame();
             }
-        }
+        } // If the player was kill or the time was over and he wants to continue playing
         else if (currentGameState != GameState.inTheGame && currentGameState != GameState.wonTheGame && GlobalStaticVariables.theUserResetTheGame == true)
         {
             StartGame();
-        }
+        } // If the player won the game 
         else if (currentGameState == GameState.wonTheGame)
         {
             if (Input.GetKeyDown(KeyCode.O))
@@ -72,18 +71,14 @@ public class GameManager : MonoBehaviour
                 // Reload the scene
                 GameSceneManager.sharedInstance.GameScene();
             }
-            //else if (Input.GetKeyDown(KeyCode.Escape))
-            //{
-            //    QuitTheGame();
-            //}
         }
+
     }
 
     // Use this for start the game
     public void StartGame()
     {
-
-        GlobalStaticVariables.theUserResetTheGame = false;
+        GlobalStaticVariables.theUserResetTheGame = false; 
         UICountDown.sharedInstance.StartTheCountDown();
         UICountDown.sharedInstance.PlayerMovement();
         theGameStart = true;
@@ -94,6 +89,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         theGameStart = false;
+        GameObject.FindGameObjectWithTag("HealthBar").SendMessage("ResetTheHealthBar");
         ChangeGameState(GameState.gameOver);
     }
 
