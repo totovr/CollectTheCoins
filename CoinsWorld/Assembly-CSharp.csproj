@@ -53,15 +53,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Models\Nokobot\ModernGuns_Handgun\Demo Assets\SimpleShoot.cs" />
      <Compile Include="Assets\Models\StoneMonster\Script\Animation_Test.cs" />
      <Compile Include="Assets\Models\TinyFire VFX\LightControl.cs" />
      <Compile Include="Assets\Scripts\Coin\Coin.cs" />
+     <Compile Include="Assets\Scripts\Coin\CoinCollected.cs" />
      <Compile Include="Assets\Scripts\Coin\CoinRotation.cs" />
      <Compile Include="Assets\Scripts\Enemy\Bullet_Attack_byEnemey.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\PlayerDetectionArea.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />
      <Compile Include="Assets\Scripts\Game\GameSceneManager.cs" />
      <Compile Include="Assets\Scripts\Game\GlobalStaticVariables.cs" />
+     <Compile Include="Assets\Scripts\Player\BulletGenerator.cs" />
+     <Compile Include="Assets\Scripts\Player\HitPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player\InputController.cs" />
+     <Compile Include="Assets\Scripts\Player\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\Sound\BackGroundSound.cs" />
      <Compile Include="Assets\Scripts\Sound\EffectSoundsManager.cs" />
      <Compile Include="Assets\Scripts\UI\UICoins.cs" />
      <Compile Include="Assets\Scripts\UI\UICountDown.cs" />

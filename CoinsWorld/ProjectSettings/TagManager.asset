@@ -8,6 +8,9 @@ TagManager:
   - WorldLight
   - PlayerFPS
   - MiniMap
+  - Enemy
+  - EnemyBullet
+  - PlayerScripts
   layers:
   - Default
   - TransparentFX

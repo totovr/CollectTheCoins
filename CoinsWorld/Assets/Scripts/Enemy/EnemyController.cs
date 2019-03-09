@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
 
     void Shot()
     {
-        var bulletInstance = GameObject.Instantiate(bulletPrefab, muzzle.position, muzzle.rotation) as GameObject;
+        GameObject bulletInstance = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
         bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
         Destroy(bulletInstance, 3f);
     }

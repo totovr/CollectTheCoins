@@ -6,20 +6,24 @@ public class EffectSoundsManager : MonoBehaviour
 {
     public List<AudioClip> audioToPlay = new List<AudioClip>();
 
-    AudioSource audioSource;
+    private AudioSource effectsAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        effectsAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    void OnTriggerEnter(Collider collider)
+    void PlayerReceivedDamaged()
     {
-        if (collider.CompareTag("Coin"))
-        {
-            audioSource.clip = audioToPlay[0];
-            audioSource.Play();
-        }
+        int rand = Random.Range(2, 5);
+        effectsAudioSource.clip = audioToPlay[rand];
+        effectsAudioSource.Play();
+    }
+
+    void CoinCollectedSound()
+    {
+        effectsAudioSource.clip = audioToPlay[0];
+        effectsAudioSource.Play();
     }
 }

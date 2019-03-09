@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class UIRadar : MonoBehaviour
 {
-
-    public float InsideRadarDistance = 20; 
+    [HideInInspector]
+    public float InsideRadarDistance = 40;
+    
+    [HideInInspector]
     public float CoinSizePercentage = 5; 
 
     public GameObject CoinImageGold;

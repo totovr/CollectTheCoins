@@ -166,6 +166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7475632577783202515}
   - component: {fileID: 7475632577783202516}
+  - component: {fileID: 453223441341275434}
+  - component: {fileID: 5490477417209188033}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Untagged
@@ -243,6 +245,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.054998994, y: -0.15129942, z: 0.000000029802322}
     m_Extent: {x: 0.651101, y: 0.6444122, z: 0.4401703}
   m_DirtyAABB: 0
+--- !u!114 &453223441341275434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475632577783202514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb1ae3f0c880f94e9588e63b82f7cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &5490477417209188033
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475632577783202514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: -0.000000034667814, y: 0.14399323, z: 0.55475426}
 --- !u!1 &7475632577794487427
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +399,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1750743405564476, guid: 5710b8c605c75b94fa2ae7cde9f30a74,
     type: 3}
   muzzle: {fileID: 7475632578552407201}
-  bulletPower: 2000
+  bulletPower: 1500
   player: {fileID: 0}
   rotate_speed: 0.5
   startTimeBtwShots: 0
