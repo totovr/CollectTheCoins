@@ -12,7 +12,8 @@ public class EnemyController : MonoBehaviour
     //　Speed of bullet
     public float bulletPower = 2000f;
 
-    public Transform player;
+    // public Transform player;
+    Transform player;
     public float rotate_speed = 0.5f;
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -58,9 +59,9 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
+        enemyAnimator = GetComponent<EnemyAnimations>();
         player = GameObject.FindWithTag("PlayerFPS").transform;
         timeBtwShots = startTimeBtwShots;
-        enemyAnimator = GetComponent<EnemyAnimations>();
     }
 
     // Update is called once per frame

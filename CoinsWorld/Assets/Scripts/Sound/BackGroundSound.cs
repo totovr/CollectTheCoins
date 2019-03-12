@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class BackGroundSound : MonoBehaviour
 {
+
     public List<AudioClip> backGroundClips = new List<AudioClip>();
 
     private AudioSource backGroundAudioSource;
+
+    private bool theGameHasStarted = true;
 
     // Start is called before the first frame update
     void Start()
     {
         backGroundAudioSource = gameObject.AddComponent<AudioSource>();
-        backGroundAudioSource.clip = backGroundClips[0];
+        backGroundAudioSource.clip = backGroundClips[1];
         backGroundAudioSource.Play();
     }
-
+ 
 }

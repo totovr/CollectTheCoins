@@ -278,7 +278,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6945057679726089804
 GameObject:
@@ -444,12 +444,10 @@ MonoBehaviour:
     type: 3}
   muzzle: {fileID: 6945057679446627087}
   bulletPower: 1500
-  player: {fileID: 0}
   rotate_speed: 5
   startTimeBtwShots: 0.5
   shootSE: {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
   deadSE: {fileID: 8300000, guid: a4bc29ad31a0a28449a15c913c0b87ee, type: 3}
-  notShooted: 1
 --- !u!114 &3982064973413257293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c9431dd75a3dd46af3bff526c32635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnimationsPositions: {fileID: 0}
 --- !u!1 &6945057680033428359
 GameObject:
   m_ObjectHideFlags: 0
