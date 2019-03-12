@@ -59,8 +59,8 @@
      <Compile Include="Assets\Scripts\Coin\Coin.cs" />
      <Compile Include="Assets\Scripts\Coin\CoinCollected.cs" />
      <Compile Include="Assets\Scripts\Coin\CoinRotation.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyAnimations.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyHit.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\PlayerDetectionArea.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />

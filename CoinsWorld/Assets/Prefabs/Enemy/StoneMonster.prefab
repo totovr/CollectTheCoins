@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 6945057679885718896}
   - component: {fileID: 6945057679885718897}
   - component: {fileID: 6945057679885718898}
-  - component: {fileID: 996538774284796374}
+  - component: {fileID: 3982064973413257293}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Enemy
@@ -449,7 +449,8 @@ MonoBehaviour:
   startTimeBtwShots: 0.5
   shootSE: {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
   deadSE: {fileID: 8300000, guid: a4bc29ad31a0a28449a15c913c0b87ee, type: 3}
---- !u!114 &996538774284796374
+  notShooted: 1
+--- !u!114 &3982064973413257293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -458,9 +459,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6945057679885718899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6618ad762f20541a0eee93265569e3, type: 3}
+  m_Script: {fileID: 11500000, guid: c9c9431dd75a3dd46af3bff526c32635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnimationsPositions: {fileID: 0}
 --- !u!1 &6945057680033428359
 GameObject:
   m_ObjectHideFlags: 0
