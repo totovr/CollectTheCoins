@@ -18,21 +18,21 @@ public class HitPlayer : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("EnemyBullet") && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            
-                if (playerLivesCounter <= 9)
-                {
-                    GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken);
-                    effectSoundsManager.PlayerReceivedDamaged();
-                }
+
+            if (playerLivesCounter <= 9)
+            {
+                GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken);
+                effectSoundsManager.PlayerReceivedDamaged();
+            }
 
             playerLivesCounter += 1;
 
-                if (playerLivesCounter > 9) // the player is death
-                {
-                    playerLivesCounter = 0;
-                    effectSoundsManager.PlayerKilled();
-                    GameManager.sharedInstance.GameOver();
-                }
+            if (playerLivesCounter > 9) // the player is death
+            {
+                playerLivesCounter = 0;
+                effectSoundsManager.PlayerKilled();
+                GameManager.sharedInstance.GameOver();
+            }
 
         }
 

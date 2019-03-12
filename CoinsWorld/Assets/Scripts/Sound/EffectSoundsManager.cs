@@ -14,16 +14,22 @@ public class EffectSoundsManager : MonoBehaviour
         effectsAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
+    void CoinCollectedSound()
+    {
+        effectsAudioSource.clip = audioToPlay[0];
+        effectsAudioSource.Play();
+    }
+
+    public void ShootTheGunSound()
+    {
+        effectsAudioSource.clip = audioToPlay[1];
+        effectsAudioSource.Play();
+    }
+
     public void PlayerReceivedDamaged()
     {
         int rand = Random.Range(2, 5);
         effectsAudioSource.clip = audioToPlay[rand];
-        effectsAudioSource.Play();
-    }
-
-    void CoinCollectedSound()
-    {
-        effectsAudioSource.clip = audioToPlay[0];
         effectsAudioSource.Play();
     }
 

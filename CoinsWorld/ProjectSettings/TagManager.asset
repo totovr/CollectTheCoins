@@ -16,6 +16,7 @@ TagManager:
   - HealthBarAnimation
   - EnemyMesh
   - AllTheEnemies
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
