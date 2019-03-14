@@ -9,8 +9,6 @@ public class BackGroundSound : MonoBehaviour
 
     private AudioSource backGroundAudioSource;
 
-    private bool theGameHasStarted = true;
-
     // Start is called before the first frame update
     void Start()
     {
