@@ -20,7 +20,7 @@ public class BulletGenerator : MonoBehaviour
         GameObject tempBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
         Rigidbody tempRigidBodyBullet = tempBullet.GetComponent<Rigidbody>();
         tempRigidBodyBullet.AddForce(tempRigidBodyBullet.transform.forward * bulletSpeed);
-        // Destroy(tempBullet, 3f);
+        Destroy(tempBullet, 3f);
     }
 
 }
