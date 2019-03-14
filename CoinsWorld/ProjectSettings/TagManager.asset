@@ -18,6 +18,8 @@ TagManager:
   - AllTheEnemies
   - PlayerBullet
   - Ghost
+  - Terrain
+  - Three
   layers:
   - Default
   - TransparentFX

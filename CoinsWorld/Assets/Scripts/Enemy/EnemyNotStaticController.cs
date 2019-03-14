@@ -40,7 +40,7 @@ public class EnemyNotStaticController : MonoBehaviour
     {
         if (collider.CompareTag("PlayerBullet") || GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            Debug.Log("Enemy shooted");
+            // Debug.Log("Enemy shooted");
             enemyAnimatorPositions.EnemyIsDeath();
             if (disableTheShootedSound)
             {

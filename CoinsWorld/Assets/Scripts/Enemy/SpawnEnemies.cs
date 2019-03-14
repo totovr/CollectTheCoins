@@ -12,6 +12,8 @@ public class SpawnEnemies : MonoBehaviour
     public static ArrayList positions = new ArrayList();
     public static ArrayList rotations = new ArrayList();
 
+    private TerrainCollider terrainCollider;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,7 +28,9 @@ public class SpawnEnemies : MonoBehaviour
         TerrainTop = TerrainBottom + TerrainLenght;
 
         InstantiateRandomPosition("StoneMonster", 30, 1f);
-        InstantiateRandomPosition("Ghost_Brown", 20, 1.5f);
+        InstantiateRandomPosition("Ghost_Brown", 20, 0.4f);
+
+        terrainCollider = GetComponent<TerrainCollider>();
 
     }
 
@@ -60,7 +64,7 @@ public class SpawnEnemies : MonoBehaviour
             randomPosition = new Vector3(randomPositionX, randomPositionY, randomPositionZ);
 
             // Note that the prefabs must been in the Resources folder
-            GameObject Enemy = Instantiate(Resources.Load(_resource, typeof(GameObject)), randomPosition, Quaternion.identity) as GameObject;
+            Instantiate(Resources.Load(_resource, typeof(GameObject)), randomPosition, Quaternion.identity);
 
         } while (i < _amount);
     }

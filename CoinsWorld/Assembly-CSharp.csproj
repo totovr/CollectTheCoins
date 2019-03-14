@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Game\GameSceneManager.cs" />
      <Compile Include="Assets\Scripts\Game\GlobalStaticVariables.cs" />
      <Compile Include="Assets\Scripts\Player\BulletGenerator.cs" />
+     <Compile Include="Assets\Scripts\Player\DestroyBullet.cs" />
      <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Player\HitPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\InputController.cs" />

@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collider.CompareTag("PlayerBullet") || GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            Debug.Log("Enemy shooted");
+            // Debug.Log("Enemy shooted");
             enemyAnimator.EnemyIsDeath();
             if (disableTheShootedSound)
             {

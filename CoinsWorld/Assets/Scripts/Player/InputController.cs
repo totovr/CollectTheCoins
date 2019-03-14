@@ -21,7 +21,7 @@ public class InputController : MonoBehaviour {
         // OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger) && Time.time > nextFire
         if ((Input.GetKey(KeyCode.Mouse0)) && Time.time > nextFire && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            Debug.Log("Shoot");
+            //Debug.Log("Shoot");
             nextFire = Time.time + fireRate;
             shootSound.ShootTheGunSound();
             BulletGenerator.sharedInstance.GenerateBullet();

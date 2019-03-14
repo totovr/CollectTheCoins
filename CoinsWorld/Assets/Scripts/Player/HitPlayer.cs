@@ -7,6 +7,8 @@ public class HitPlayer : MonoBehaviour
     private int playerLivesCounter = 0;
     private float damageTaken = 0.1f;
 
+    private int playerLifes = 9;
+
     EffectSoundsManager effectSoundsManager;
 
     void Start()
@@ -19,7 +21,7 @@ public class HitPlayer : MonoBehaviour
         if (collider.gameObject.CompareTag("EnemyBullet") && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
 
-            if (playerLivesCounter <= 9)
+            if (playerLivesCounter <= playerLifes)
             {
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken);
                 effectSoundsManager.PlayerReceivedDamaged();
@@ -27,7 +29,7 @@ public class HitPlayer : MonoBehaviour
 
             playerLivesCounter += 1;
 
-            if (playerLivesCounter > 9) // the player is death
+            if (playerLivesCounter > playerLifes) // the player is death
             {
                 playerLivesCounter = 0;
                 effectSoundsManager.PlayerKilled();
