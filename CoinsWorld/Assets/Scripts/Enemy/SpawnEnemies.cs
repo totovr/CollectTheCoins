@@ -14,6 +14,9 @@ public class SpawnEnemies : MonoBehaviour
 
     private TerrainCollider terrainCollider;
 
+    private int numberOfEnemyOne = 30;
+    private int numberOfEnemyTwo = 20;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,8 +30,8 @@ public class SpawnEnemies : MonoBehaviour
         TerrainRight = TerrainLeft + TerrainWidth;
         TerrainTop = TerrainBottom + TerrainLenght;
 
-        InstantiateRandomPosition("StoneMonster", 30, 1f);
-        InstantiateRandomPosition("Ghost_Brown", 20, 0.4f);
+        InstantiateRandomPosition("StoneMonster", numberOfEnemyOne, 1f);
+        InstantiateRandomPosition("Ghost_Brown", numberOfEnemyTwo, 1.5f);
 
         terrainCollider = GetComponent<TerrainCollider>();
 
