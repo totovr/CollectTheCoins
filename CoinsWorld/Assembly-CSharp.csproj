@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyNotStaticAnimations.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyNotStaticController.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyNotStaticMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyTypes.cs" />
      <Compile Include="Assets\Scripts\Enemy\PlayerDetectionArea.cs" />
      <Compile Include="Assets\Scripts\Enemy\SpawnEnemies.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />

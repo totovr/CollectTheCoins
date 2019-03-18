@@ -165,8 +165,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4566729225698072}
   - component: {fileID: 137820373797154666}
-  - component: {fileID: 1839078378810049807}
   - component: {fileID: 2579279840785174018}
+  - component: {fileID: 1839078378810049807}
   - component: {fileID: 4150082210433417225}
   m_Layer: 0
   m_Name: Mesh
@@ -242,19 +242,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0026338515, y: 0.000048526563, z: 0.0000000037252903}
     m_Extent: {x: 0.008055966, y: 0.00904651, z: 0.008459969}
   m_DirtyAABB: 0
---- !u!114 &1839078378810049807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390760153652586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb1ae3f0c880f94e9588e63b82f7cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableTheController: 0
 --- !u!135 &2579279840785174018
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -268,6 +255,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: 0.000000008702045, y: 0.009365751, z: 0.0000000037252903}
+--- !u!114 &1839078378810049807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390760153652586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb1ae3f0c880f94e9588e63b82f7cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableTheController: 0
 --- !u!114 &4150082210433417225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820021780196580}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -4.308, y: 0.323, z: -4.127}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 4485386103032562}
@@ -409,8 +409,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.018172057, y: 0.017908355, z: 0.01}
-  m_Center: {x: -0.00010071098, y: 0.009045819, z: -0}
+  m_Size: {x: 0.025010487, y: 0.02323891, z: 0.01}
+  m_Center: {x: 0.00031372785, y: 0.008727714, z: 0}
 --- !u!114 &114587239225918310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7372793668228386037, guid: efc6ea9506d11624397da9a2060bcd73,
     type: 3}
   muzzle: {fileID: 4115731808440630}
-  bulletPower: 1500
+  bulletSpeed: 700
   speed: 1.5
   stoppingDistance: 8
   retreatDistance: 3

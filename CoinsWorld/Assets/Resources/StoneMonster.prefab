@@ -426,8 +426,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 1, z: 1}
-  m_Center: {x: -0.02, y: 0.6, z: -0.1}
+  m_Size: {x: 1.1503534, y: 1, z: 1}
+  m_Center: {x: 0.012631893, y: 0.6, z: -0.100000024}
 --- !u!114 &6945057679885718898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1750743405564476, guid: 5710b8c605c75b94fa2ae7cde9f30a74,
     type: 3}
   muzzle: {fileID: 6945057679446627087}
-  bulletPower: 1500
+  bulletSpeed: 1200
   rotate_speed: 5
   startTimeBtwShots: 0.5
   shootSE: {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}

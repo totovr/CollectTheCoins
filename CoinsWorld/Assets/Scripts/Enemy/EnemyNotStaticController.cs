@@ -8,7 +8,8 @@ public class EnemyNotStaticController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform muzzle;
     //　Speed of bullet
-    public float bulletPower = 2000f;
+    [HideInInspector]
+    public float bulletSpeed = 700f;
     //  Animation
     private EnemyNotStaticAnimations enemyAnimatorPositions;
 
@@ -16,6 +17,7 @@ public class EnemyNotStaticController : MonoBehaviour
     public float stoppingDistance;
     public float retreatDistance;
     Transform player;
+    [HideInInspector]
     public float rotate_speed = 0.5f;
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -32,7 +34,7 @@ public class EnemyNotStaticController : MonoBehaviour
     void Shot()
     {
         var bulletInstance = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation) as GameObject;
-        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletSpeed);
         Destroy(bulletInstance, 3f);
     }
 

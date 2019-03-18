@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
         {
             lifeReduce -= _hitDamage;
             healthBar.localScale = new Vector3(lifeReduce, 1, 1);
-            healthText.text = (Math.Round(lifeReduce, 1) * 100).ToString() + "%";
+            healthText.text = (Math.Round(lifeReduce, 2) * 100).ToString() + "%";
         }
     }
 

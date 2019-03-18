@@ -8,10 +8,6 @@ public class SpawnEnemies : MonoBehaviour
     public LayerMask TerrainLayer;
     public static float TerrainLeft, TerrainRight, TerrainTop, TerrainBottom, TerrainWidth, TerrainLenght, TerrainHeight;
 
-    public static ArrayList units = new ArrayList();
-    public static ArrayList positions = new ArrayList();
-    public static ArrayList rotations = new ArrayList();
-
     private TerrainCollider terrainCollider;
 
     private int numberOfEnemyOne = 30;
@@ -30,8 +26,8 @@ public class SpawnEnemies : MonoBehaviour
         TerrainRight = TerrainLeft + TerrainWidth;
         TerrainTop = TerrainBottom + TerrainLenght;
 
-        InstantiateRandomPosition("StoneMonster", numberOfEnemyOne, 1f);
-        InstantiateRandomPosition("Ghost_Brown", numberOfEnemyTwo, 1.5f);
+        InstantiateRandomPosition("StoneMonster", numberOfEnemyOne, 2f);
+        InstantiateRandomPosition("Ghost_Brown", numberOfEnemyTwo, 5f);
 
         terrainCollider = GetComponent<TerrainCollider>();
 
@@ -45,7 +41,7 @@ public class SpawnEnemies : MonoBehaviour
         float randomPositionX, randomPositionY, randomPositionZ;
         Vector3 randomPosition = Vector3.zero;
 
-        int mountainCompensation = 40;
+        int mountainCompensation = 70; // This variable is to reduce the size of the spawn area
 
         do
         {

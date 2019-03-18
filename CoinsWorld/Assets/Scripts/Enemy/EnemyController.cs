@@ -10,10 +10,12 @@ public class EnemyController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform muzzle;
     //　Speed of bullet
-    public float bulletPower = 2000f;
+    [HideInInspector]
+    public float bulletSpeed = 1200;
 
     // public Transform player;
     Transform player;
+    [HideInInspector]
     public float rotate_speed = 0.5f;
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -30,7 +32,7 @@ public class EnemyController : MonoBehaviour
     void Shot()
     {
         GameObject bulletInstance = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
-        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletSpeed);
         Destroy(bulletInstance, 3f);
     }
 

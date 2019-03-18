@@ -5,9 +5,8 @@ using UnityEngine;
 public class HitPlayer : MonoBehaviour
 {
     private int playerLivesCounter = 0;
-    private float damageTaken = 0.1f;
-
-    private int playerLifes = 9;
+    private float damageTaken = 0.01f; // Damage taken by the the ememy;
+    private int playerLifes = 99; // This are the lifes of the player
 
     EffectSoundsManager effectSoundsManager;
 
@@ -35,8 +34,23 @@ public class HitPlayer : MonoBehaviour
                 effectSoundsManager.PlayerKilled();
                 GameManager.sharedInstance.GameOver();
             }
+        } else if(collider.gameObject.CompareTag("EnemyTwoBullet") && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
+            {
 
-        }
+                if (playerLivesCounter <= playerLifes)
+                {
+                    GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken * 4);
+                    effectSoundsManager.PlayerReceivedDamaged();
+                }
 
+                playerLivesCounter += 4;
+
+                if (playerLivesCounter > playerLifes) // the player is death
+                {
+                    playerLivesCounter = 0;
+                    effectSoundsManager.PlayerKilled();
+                    GameManager.sharedInstance.GameOver();
+                }
+            }
     }
 }
