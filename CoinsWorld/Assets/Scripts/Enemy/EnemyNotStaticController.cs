@@ -31,6 +31,23 @@ public class EnemyNotStaticController : MonoBehaviour
     private bool notShooted = true;
     private bool disableTheShootedSound = true;
 
+    // Type of enemy
+    //private int monsterValue = 1;
+    //private EnemyTypes _enemyType;
+    //private EnemyTypes enemyTwo
+    //{
+    //    get
+    //    {
+    //        return _enemyType;
+    //    }
+    //    set
+    //    {
+    //        _enemyType = value;
+    //        int _typeValue = (int)_enemyType;
+    //        monsterValue = _typeValue * 5; // add 5 seconds for the first enemy
+    //    }
+    //}
+
     void Shot()
     {
         var bulletInstance = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation) as GameObject;
@@ -50,6 +67,13 @@ public class EnemyNotStaticController : MonoBehaviour
             }
             disableTheShootedSound = false;
             notShooted = false;
+
+            // Bonus time
+            if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
+            {
+                // UICountDown.TimerBonus = monsterValue;
+            }
+
             // Destroy the enemy after n time
             Invoke("destroyEnemy", 1.5f);
         }
@@ -67,6 +91,7 @@ public class EnemyNotStaticController : MonoBehaviour
         player = GameObject.FindWithTag("PlayerFPS").transform;
         timeBtwShots = startTimeBtwShots;
 
+        // enemyTwo = EnemyTypes.GHOST;
     }
 
     // Update is called once per frame

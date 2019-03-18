@@ -48,6 +48,13 @@ public class EnemyController : MonoBehaviour
             }
             disableTheShootedSound = false;
             notShooted = false;
+
+            // Bonus time
+            if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
+            {
+                // UICountDown.TimerBonus = monsterValue;
+            }
+
             // Destroy the enemy after n time
             Invoke("destroyEnemy", 1.5f);
         }
@@ -64,6 +71,8 @@ public class EnemyController : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimations>();
         player = GameObject.FindWithTag("PlayerFPS").transform;
         timeBtwShots = startTimeBtwShots;
+
+        // enemyOne = EnemyTypes.STONE;
     }
 
     // Update is called once per frame

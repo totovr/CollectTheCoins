@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 10
+  controlID: 91
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 110
+  controlID: 92
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 111
+  controlID: 93
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Enemy
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Enemy
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\avega\Documents\Developer\Unity\CoinsWorld
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 51}
-    m_SelectedIDs: aa0c0000
-    m_LastClickedID: 3242
-    m_ExpandedIDs: 00000000a80b00008e0c0000380d00005c0d0000340e0000400f000044110000581100008a1100006c1200000a130000d8130000f21400004e1600009a160000c8160000d81600007c1800009a180000a4180000321900005c190000
+    scrollPos: {x: 0, y: 39}
+    m_SelectedIDs: da0f0000
+    m_LastClickedID: 4058
+    m_ExpandedIDs: 00000000ac0b0000200c0000920c0000a20c00003c0d0000620d00003a0e0000460f00004a1100005e110000901100007212000010130000de13000090140000fa14000056160000a2160000d0160000e0160000a017000084180000a21800003a19000064190000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a80b00008e0c0000380d00005c0d0000340e0000400f000044110000581100008a1100006c1200000a130000d8130000f21400004e1600009a160000c8160000d81600007c1800009a180000a4180000321900005c190000
+    m_ExpandedIDs: 00000000ac0b0000920c00003c0d0000620d00003a0e0000460f00004a1100005e110000901100007212000010130000de130000fa14000056160000a2160000d0160000e016000084180000a2180000ac1800003a19000064190000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -496,9 +496,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b4070000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 16780000
+      m_SelectedIDs: c8480000
+      m_LastClickedID: 18632
+      m_ExpandedIDs: 
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 10.931803, y: 14.415541, z: 8.962974}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 10.931803, y: 14.415541, z: 8.962974}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -584,13 +584,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.7071068, y: 0, z: 0, w: -0.7071068}
+    m_Target: {x: -0.5300998, y: 0.020346213, z: -0.012724833, w: -0.84759563}
     speed: 2
-    m_Value: {x: -0.7071068, y: 0, z: 0, w: -0.7071068}
+    m_Value: {x: -0.5300998, y: 0.020346213, z: -0.012724833, w: -0.84759563}
   m_Size:
-    m_Target: 0.8573652
+    m_Target: 5.8234234
     speed: 2
-    m_Value: 0.8573652
+    m_Value: 5.8234234
   m_Ortho:
     m_Target: 0
     speed: 2

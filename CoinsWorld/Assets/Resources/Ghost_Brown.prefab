@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 65301036316519686}
   - component: {fileID: 114587239225918310}
   - component: {fileID: 589746088454557454}
+  - component: {fileID: 1880068479338351230}
   m_Layer: 0
   m_Name: Ghost_Brown
   m_TagString: Ghost
@@ -444,6 +445,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b5a8285c737f7d459c3d047cd423299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1880068479338351230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820021780196580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f1670b1b385234ba80511ca9e7eea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1848003271024956
