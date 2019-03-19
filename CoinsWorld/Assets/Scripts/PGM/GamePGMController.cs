@@ -6,15 +6,21 @@ public class GamePGMController : MonoBehaviour
 {
     public GamePGMHandler serialHandlerPGM;
 
-    public void ActuateThePGM()
+    public void EnemyOneActuation()
     {
         serialHandlerPGM.Write("1A");
-        Debug.Log("The PGM is actuated");
+        // Debug.Log("The PGM is actuated");
+    }
+
+    public void EnemyTwoActuation()
+    {
+        serialHandlerPGM.Write("2A");
+        // Debug.Log("The PGM is actuated");
     }
 
     public void RelaxThePGM()
     {
         serialHandlerPGM.Write("0A");
-        Debug.Log("The PGM is not actuated");
+        // Debug.Log("The PGM is not actuated");
     }
 }
