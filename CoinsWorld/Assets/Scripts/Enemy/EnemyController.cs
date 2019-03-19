@@ -29,6 +29,8 @@ public class EnemyController : MonoBehaviour
     private bool notShooted = true;
     private bool disableTheShootedSound = true;
 
+    EnemyTypes enemyTypeDamage;
+
     void Shot()
     {
         GameObject bulletInstance = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
@@ -53,6 +55,7 @@ public class EnemyController : MonoBehaviour
             if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
             {
                 // UICountDown.TimerBonus = monsterValue;
+                UICountDown.TimerBonus = enemyTypeDamage.EnemyValueCalculator(EnemyTypesEnum.STONE);
             }
 
             // Destroy the enemy after n time
@@ -73,6 +76,7 @@ public class EnemyController : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
 
         // enemyOne = EnemyTypes.STONE;
+        enemyTypeDamage = GetComponent<EnemyTypes>();
     }
 
     // Update is called once per frame

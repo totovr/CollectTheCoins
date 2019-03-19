@@ -34,23 +34,24 @@ public class HitPlayer : MonoBehaviour
                 effectSoundsManager.PlayerKilled();
                 GameManager.sharedInstance.GameOver();
             }
-        } else if(collider.gameObject.CompareTag("EnemyTwoBullet") && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
+        }
+        else if (collider.gameObject.CompareTag("EnemyTwoBullet") && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
+        {
+
+            if (playerLivesCounter <= playerLifes)
             {
-
-                if (playerLivesCounter <= playerLifes)
-                {
-                    GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken * 4);
-                    effectSoundsManager.PlayerReceivedDamaged();
-                }
-
-                playerLivesCounter += 4;
-
-                if (playerLivesCounter > playerLifes) // the player is death
-                {
-                    playerLivesCounter = 0;
-                    effectSoundsManager.PlayerKilled();
-                    GameManager.sharedInstance.GameOver();
-                }
+                GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken * 4);
+                effectSoundsManager.PlayerReceivedDamaged();
             }
+
+            playerLivesCounter += 4;
+
+            if (playerLivesCounter > playerLifes) // the player is death
+            {
+                playerLivesCounter = 0;
+                effectSoundsManager.PlayerKilled();
+                GameManager.sharedInstance.GameOver();
+            }
+        }
     }
 }

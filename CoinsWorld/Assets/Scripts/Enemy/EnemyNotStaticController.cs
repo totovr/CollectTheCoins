@@ -48,6 +48,8 @@ public class EnemyNotStaticController : MonoBehaviour
     //    }
     //}
 
+    EnemyTypes enemyTypeDamage;
+
     void Shot()
     {
         var bulletInstance = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation) as GameObject;
@@ -72,6 +74,7 @@ public class EnemyNotStaticController : MonoBehaviour
             if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
             {
                 // UICountDown.TimerBonus = monsterValue;
+                UICountDown.TimerBonus = enemyTypeDamage.EnemyValueCalculator(EnemyTypesEnum.GHOST);
             }
 
             // Destroy the enemy after n time
@@ -92,6 +95,7 @@ public class EnemyNotStaticController : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
 
         // enemyTwo = EnemyTypes.GHOST;
+        enemyTypeDamage = GetComponent<EnemyTypes>();
     }
 
     // Update is called once per frame
