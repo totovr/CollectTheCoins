@@ -8,14 +8,13 @@ public class GamePGMController : MonoBehaviour
 
     public void ActuateThePGM()
     {
-        serialHandlerPGM.Write("1");
+        serialHandlerPGM.Write("1A");
         Debug.Log("The PGM is actuated");
     }
 
     public void RelaxThePGM()
     {
-        serialHandlerPGM.Write("0");
+        serialHandlerPGM.Write("0A");
         Debug.Log("The PGM is not actuated");
     }
-    // Update is called once per frame
 }

@@ -10,9 +10,12 @@ public class HitPlayer : MonoBehaviour
 
     EffectSoundsManager effectSoundsManager;
 
+    GamePGMController pgmControl;
+
     void Start()
     {
         effectSoundsManager = GetComponent<EffectSoundsManager>();
+        pgmControl = GetComponent<GamePGMController>();
     }
 
     void OnTriggerEnter(Collider collider)
@@ -22,6 +25,8 @@ public class HitPlayer : MonoBehaviour
 
             if (playerLivesCounter <= playerLifes)
             {
+                GameObject.FindGameObjectWithTag("PlayerScripts").SendMessage("ActuateThePGM");
+
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken);
                 effectSoundsManager.PlayerReceivedDamaged();
             }
@@ -40,6 +45,8 @@ public class HitPlayer : MonoBehaviour
 
             if (playerLivesCounter <= playerLifes)
             {
+                GameObject.FindGameObjectWithTag("PlayerScripts").SendMessage("ActuateThePGM");
+
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken * 4);
                 effectSoundsManager.PlayerReceivedDamaged();
             }

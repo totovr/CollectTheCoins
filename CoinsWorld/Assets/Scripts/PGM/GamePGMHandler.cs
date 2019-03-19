@@ -98,10 +98,10 @@ public class GamePGMHandler : MonoBehaviour
 
     void OnDestroy()
     {
-        for (int i = 0; i < 5; i++) // To reset the microcontroller once the program is closed 
+        for (int i = 0; i < 3; i++) // To reset the microcontroller once the program is closed 
         {
-            Debug.Log("5");
-            myDataPGM.Write("5");
+            // Debug.Log("5");
+            myDataPGM.Write("5A");
         }
         myDataPGM.Close();
         myDataPGM.Dispose();
