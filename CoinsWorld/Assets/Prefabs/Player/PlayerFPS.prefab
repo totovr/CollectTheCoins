@@ -101,8 +101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3015111811507023193}
-  - component: {fileID: 3015111811507023188}
   - component: {fileID: 3015111811507023194}
+  - component: {fileID: 3015111811507023188}
   - component: {fileID: 3015111811507023195}
   - component: {fileID: 3015111811507023189}
   - component: {fileID: 3015111811507023190}
@@ -127,6 +127,20 @@ Transform:
   m_Father: {fileID: 3015111810791359283}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3015111811507023194
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015111811507023192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.5091019
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.1836052, z: 0}
 --- !u!114 &3015111811507023188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,20 +164,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d8a3ae3b1801e74697d2120d9a45f0a, type: 3}
   - {fileID: 8300000, guid: e427f78ff6cb18743a04ad5c4ea57aeb, type: 3}
   - {fileID: 8300000, guid: 149cf96a2212d25408765ce01a4d1385, type: 3}
---- !u!136 &3015111811507023194
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3015111811507023192}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.5091019
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.1836052, z: 0}
 --- !u!114 &3015111811507023195
 MonoBehaviour:
   m_ObjectHideFlags: 0

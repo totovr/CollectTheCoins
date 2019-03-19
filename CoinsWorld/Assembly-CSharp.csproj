@@ -65,12 +65,14 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyNotStaticAnimations.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyNotStaticController.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyNotStaticMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySoundEffect.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyTypes.cs" />
      <Compile Include="Assets\Scripts\Enemy\PlayerDetectionArea.cs" />
      <Compile Include="Assets\Scripts\Enemy\SpawnEnemies.cs" />
      <Compile Include="Assets\Scripts\Game\GameManager.cs" />
      <Compile Include="Assets\Scripts\Game\GameSceneManager.cs" />
      <Compile Include="Assets\Scripts\Game\GlobalStaticVariables.cs" />
+     <Compile Include="Assets\Scripts\Game\Sun.cs" />
      <Compile Include="Assets\Scripts\PGM\GamePGMController.cs" />
      <Compile Include="Assets\Scripts\PGM\GamePGMHandler.cs" />
      <Compile Include="Assets\Scripts\PGM\SerialConfig.cs" />
@@ -83,6 +85,8 @@
      <Compile Include="Assets\Scripts\Sound\EffectSoundsManager.cs" />
      <Compile Include="Assets\Scripts\UI\UICoins.cs" />
      <Compile Include="Assets\Scripts\UI\UICountDown.cs" />
+     <Compile Include="Assets\Scripts\UI\UIEnemies.cs" />
+     <Compile Include="Assets\Scripts\UI\UIFinalTimer.cs" />
      <Compile Include="Assets\Scripts\UI\UIRadar.cs" />
      <Compile Include="Assets\Scripts\UI\UITime.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">

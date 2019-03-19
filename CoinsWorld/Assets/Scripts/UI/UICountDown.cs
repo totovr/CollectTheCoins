@@ -29,6 +29,8 @@ public class UICountDown : MonoBehaviour
     [HideInInspector]
     public bool theGameIsCounting = true;
 
+    private bool displayUserTimeRecord = true;
+
     void Awake()
     {
         sharedInstance = this;
@@ -45,8 +47,6 @@ public class UICountDown : MonoBehaviour
 
         characterControllerScript.m_WalkSpeed = 0.0f;
         characterControllerScript.m_RunSpeed = 0.0f;
-
-        // SetUpCountDownTimer(GameTime); // this is the time that will be provide to the user
     }
 
     // This is a probe
@@ -58,8 +58,16 @@ public class UICountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Save the current timer of the player to display it if he won 
+        if (GameManager.sharedInstance.thePlayerWon == true && displayUserTimeRecord == true)
+        {
+            GlobalStaticVariables.totalTimer = timeLeft;
+            displayUserTimeRecord = false;
+        }
+
         if (GameManager.sharedInstance.theGameStart == true && theGameIsCounting == true)
         {
+            // This is to add time if the player collect or kill some enemy
             if (TimerBonus > 0)
             {
                 _countDownTimerStartTime += TimerBonus;
@@ -67,6 +75,7 @@ public class UICountDown : MonoBehaviour
             }
 
             timeLeft = (int)CountDownTimeRemaning();
+
             if (timeLeft > 0)
             {
                 timerMessage = "Timer: " + LeadingZero(timeLeft);

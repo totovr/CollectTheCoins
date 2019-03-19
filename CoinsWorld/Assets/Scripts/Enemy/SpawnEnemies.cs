@@ -16,6 +16,8 @@ public class SpawnEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        terrainCollider = GetComponent<TerrainCollider>();
+
         TerrainLeft = WorldTerrain.transform.position.x;
         TerrainBottom = WorldTerrain.transform.position.z;
 
@@ -29,7 +31,7 @@ public class SpawnEnemies : MonoBehaviour
         InstantiateRandomPosition("StoneMonster", numberOfEnemyOne, 2f);
         InstantiateRandomPosition("Ghost_Brown", numberOfEnemyTwo, 5f);
 
-        terrainCollider = GetComponent<TerrainCollider>();
+        GlobalStaticVariables.totalEnemyCounter = numberOfEnemyOne + numberOfEnemyTwo;
 
     }
 

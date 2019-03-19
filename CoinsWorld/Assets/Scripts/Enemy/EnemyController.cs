@@ -21,15 +21,18 @@ public class EnemyController : MonoBehaviour
     public float startTimeBtwShots;
 
     //  Shooting sound
-    private AudioSource audioSource;
-    public AudioClip shootSE;
-    public AudioClip deadSE;
+    // private AudioSource audioSource;
+    // public AudioClip shootSE;
+    // public AudioClip deadSE;
+    private EnemySoundEffect enemySound;
 
     // If the enemy is shoot the enemy will not be able to shoot
     private bool notShooted = true;
     private bool disableTheShootedSound = true;
 
     EnemyTypes enemyTypeDamage;
+
+    private int monsterKilledUI = 1;
 
     void Shot()
     {
@@ -46,7 +49,8 @@ public class EnemyController : MonoBehaviour
             enemyAnimator.EnemyIsDeath();
             if (disableTheShootedSound)
             {
-                audioSource.PlayOneShot(deadSE);
+                // audioSource.PlayOneShot(deadSE);
+                enemySound.EnemyKilled();
             }
             disableTheShootedSound = false;
             notShooted = false;
@@ -54,7 +58,6 @@ public class EnemyController : MonoBehaviour
             // Bonus time
             if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
             {
-                // UICountDown.TimerBonus = monsterValue;
                 UICountDown.TimerBonus = enemyTypeDamage.EnemyValueCalculator(EnemyTypesEnum.STONE);
             }
 
@@ -65,18 +68,19 @@ public class EnemyController : MonoBehaviour
 
     void destroyEnemy()
     {
+        GlobalStaticVariables.totalEnemyCounter -= monsterKilledUI;
+        UIEnemies.sharedInstance.UpdateEnemyKilledUI();
         Destroy(gameObject);
     }
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+        // audioSource = gameObject.AddComponent<AudioSource>();
         enemyAnimator = GetComponent<EnemyAnimations>();
+        enemyTypeDamage = GetComponent<EnemyTypes>();
+        enemySound = GetComponent<EnemySoundEffect>();
         player = GameObject.FindWithTag("PlayerFPS").transform;
         timeBtwShots = startTimeBtwShots;
-
-        // enemyOne = EnemyTypes.STONE;
-        enemyTypeDamage = GetComponent<EnemyTypes>();
     }
 
     // Update is called once per frame
@@ -92,7 +96,8 @@ public class EnemyController : MonoBehaviour
             if (timeBtwShots <= 0)
             { 
                 enemyAnimator.EnemyIsAttacking();
-                audioSource.PlayOneShot(shootSE);
+                // audioSource.PlayOneShot(shootSE);
+                enemySound.EnemyShooted();
                 Shot();
                 timeBtwShots = startTimeBtwShots;
             }

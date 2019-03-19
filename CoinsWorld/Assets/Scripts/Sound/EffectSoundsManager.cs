@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EffectSoundsManager : MonoBehaviour
 {
-    public List<AudioClip> audioToPlay = new List<AudioClip>();
+    public List<AudioClip> CoinsAudio = new List<AudioClip>();
+    public List<AudioClip> ShootAudio = new List<AudioClip>();
+    public List<AudioClip> DamageAudio = new List<AudioClip>();
+    public List<AudioClip> KilledAudio = new List<AudioClip>();
 
     private AudioSource effectsAudioSource;
+
+    int randomNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -16,27 +21,28 @@ public class EffectSoundsManager : MonoBehaviour
 
     void CoinCollectedSound()
     {
-        effectsAudioSource.clip = audioToPlay[0];
+        randomNumber = Random.Range(0, 61);
+        effectsAudioSource.clip = CoinsAudio[randomNumber];
         effectsAudioSource.Play();
     }
 
     public void ShootTheGunSound()
     {
-        effectsAudioSource.clip = audioToPlay[1];
+        effectsAudioSource.clip = ShootAudio[0];
         effectsAudioSource.Play();
     }
 
     public void PlayerReceivedDamaged()
     {
-        int rand = Random.Range(2, 5);
-        effectsAudioSource.clip = audioToPlay[rand];
+        int rand = Random.Range(0, 3);
+        effectsAudioSource.clip = DamageAudio[rand];
         effectsAudioSource.Play();
     }
 
     public void PlayerKilled()
     {
-        int rand = Random.Range(6, 9);
-        effectsAudioSource.clip = audioToPlay[rand];
+        int rand = Random.Range(0, 3);
+        effectsAudioSource.clip = KilledAudio[rand];
         effectsAudioSource.Play();
     }
 }

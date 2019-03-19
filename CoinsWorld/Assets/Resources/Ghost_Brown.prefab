@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 114587239225918310}
   - component: {fileID: 589746088454557454}
   - component: {fileID: 1880068479338351230}
+  - component: {fileID: 68836301018155691}
   m_Layer: 0
   m_Name: Ghost_Brown
   m_TagString: Ghost
@@ -459,6 +460,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f1670b1b385234ba80511ca9e7eea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &68836301018155691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820021780196580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17af882e92f002146a19f3f6a8807175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShootAudio:
+  - {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
+  KilledAudio:
+  - {fileID: 8300000, guid: 0d3def65994b84d04b8791e02beb2391, type: 3}
+  - {fileID: 8300000, guid: 3a20c1f2fd4d44c4d9a6fabbec93be20, type: 3}
+  - {fileID: 8300000, guid: d4aedaaa8b7044b028ce7da7409a8fab, type: 3}
+  - {fileID: 8300000, guid: a7fdde9dbb81b4167a27a8aeb1e4ce58, type: 3}
+  - {fileID: 8300000, guid: 2a0632631fb04405fa85f4a5a5d01a4d, type: 3}
 --- !u!1 &1848003271024956
 GameObject:
   m_ObjectHideFlags: 0

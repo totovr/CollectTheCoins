@@ -23,32 +23,18 @@ public class EnemyNotStaticController : MonoBehaviour
     public float startTimeBtwShots;
 
     //  Shooting sound
-    private AudioSource audioSource;
-    public AudioClip shootSE;
-    public AudioClip deadSE;
+    //private AudioSource audioSource;
+    //public AudioClip shootSE;
+    //public AudioClip deadSE;
+    private EnemySoundEffect enemySound;
 
     // If the enemy is shoot the enemy will not be able to shoot
     private bool notShooted = true;
     private bool disableTheShootedSound = true;
 
-    // Type of enemy
-    //private int monsterValue = 1;
-    //private EnemyTypes _enemyType;
-    //private EnemyTypes enemyTwo
-    //{
-    //    get
-    //    {
-    //        return _enemyType;
-    //    }
-    //    set
-    //    {
-    //        _enemyType = value;
-    //        int _typeValue = (int)_enemyType;
-    //        monsterValue = _typeValue * 5; // add 5 seconds for the first enemy
-    //    }
-    //}
-
     EnemyTypes enemyTypeDamage;
+
+    private int monsterKilledUI = 1;
 
     void Shot()
     {
@@ -61,11 +47,11 @@ public class EnemyNotStaticController : MonoBehaviour
     {
         if (collider.CompareTag("PlayerBullet") || GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            // Debug.Log("Enemy shooted");
             enemyAnimatorPositions.EnemyIsDeath();
             if (disableTheShootedSound)
             {
-                audioSource.PlayOneShot(deadSE);
+                //audioSource.PlayOneShot(deadSE);
+                enemySound.EnemyKilled();
             }
             disableTheShootedSound = false;
             notShooted = false;
@@ -73,7 +59,6 @@ public class EnemyNotStaticController : MonoBehaviour
             // Bonus time
             if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
             {
-                // UICountDown.TimerBonus = monsterValue;
                 UICountDown.TimerBonus = enemyTypeDamage.EnemyValueCalculator(EnemyTypesEnum.GHOST);
             }
 
@@ -84,18 +69,19 @@ public class EnemyNotStaticController : MonoBehaviour
 
     void destroyEnemy()
     {
+        GlobalStaticVariables.totalEnemyCounter -= monsterKilledUI;
+        UIEnemies.sharedInstance.UpdateEnemyKilledUI();
         Destroy(gameObject);
     }
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+        // audioSource = gameObject.AddComponent<AudioSource>();
         enemyAnimatorPositions = GetComponent<EnemyNotStaticAnimations>();
+        enemyTypeDamage = GetComponent<EnemyTypes>();
+        enemySound = GetComponent<EnemySoundEffect>();
         player = GameObject.FindWithTag("PlayerFPS").transform;
         timeBtwShots = startTimeBtwShots;
-
-        // enemyTwo = EnemyTypes.GHOST;
-        enemyTypeDamage = GetComponent<EnemyTypes>();
     }
 
     // Update is called once per frame
@@ -124,7 +110,8 @@ public class EnemyNotStaticController : MonoBehaviour
             if (timeBtwShots <= 0)
             {
                 enemyAnimatorPositions.EnemyIsAttacking();
-                audioSource.PlayOneShot(shootSE);
+                //audioSource.PlayOneShot(shootSE);
+                enemySound.EnemyShooted();
                 Shot();
                 timeBtwShots = startTimeBtwShots;
             }

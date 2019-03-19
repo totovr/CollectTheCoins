@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
     public Canvas gameOverCanvas;
     public Canvas gameWonCanvas;
 
-    public bool theGameStart = false; // this is used to start the coins 
+    public bool theGameStart = false; // this is used to start the coins
+    public bool thePlayerWon = false;
 
     void Awake()
     {
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
     {
         GlobalStaticVariables.theUserResetTheGame = true;
         theGameStart = false;
+        thePlayerWon = true;
         ChangeGameState(GameState.wonTheGame);
     }
 

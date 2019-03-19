@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 6945057679885718898}
   - component: {fileID: 3982064973413257293}
   - component: {fileID: 3364424655921120934}
+  - component: {fileID: 5010462928590227906}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Enemy
@@ -447,8 +448,6 @@ MonoBehaviour:
   bulletSpeed: 1200
   rotate_speed: 5
   startTimeBtwShots: 0.5
-  shootSE: {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
-  deadSE: {fileID: 8300000, guid: a4bc29ad31a0a28449a15c913c0b87ee, type: 3}
 --- !u!114 &3982064973413257293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +472,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f1670b1b385234ba80511ca9e7eea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5010462928590227906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945057679885718899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17af882e92f002146a19f3f6a8807175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShootAudio:
+  - {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
+  KilledAudio:
+  - {fileID: 8300000, guid: 0d3def65994b84d04b8791e02beb2391, type: 3}
+  - {fileID: 8300000, guid: 3a20c1f2fd4d44c4d9a6fabbec93be20, type: 3}
+  - {fileID: 8300000, guid: d4aedaaa8b7044b028ce7da7409a8fab, type: 3}
+  - {fileID: 8300000, guid: a7fdde9dbb81b4167a27a8aeb1e4ce58, type: 3}
+  - {fileID: 8300000, guid: 2a0632631fb04405fa85f4a5a5d01a4d, type: 3}
 --- !u!1 &6945057680033428359
 GameObject:
   m_ObjectHideFlags: 0
