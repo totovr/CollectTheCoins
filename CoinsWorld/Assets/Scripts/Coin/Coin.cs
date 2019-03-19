@@ -57,7 +57,7 @@ public class Coin : MonoBehaviour
 
             if (GameManager.sharedInstance.currentGameState != GameState.gameOver)
             {
-                UICountDown.TimerBonus = coinValue * coinValue * 3;
+                UICountDown.TimerBonus = coinValue * 3;
             }
 
             Destroy(gameObject);

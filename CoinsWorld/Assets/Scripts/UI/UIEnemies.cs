@@ -31,7 +31,7 @@ public class UIEnemies : MonoBehaviour
 
         if (remaningEnemies > 0)
         {
-            enemyText.text = "Remaining Enemies: \n <color='yellow'>" + enemiesKilled + "/ " + targetEnemies + " </color>";
+            enemyText.text = "Enemies defeated: \n <color='yellow'>" + enemiesKilled + "/ " + targetEnemies + " </color>";
         }
         else
         {

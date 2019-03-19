@@ -988,6 +988,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4180494494073995955, guid: a28f0c3942a3fef43af86aef77e37cf1,
+        type: 3}
+      propertyPath: m_Text
+      value: "Enemies defeated\r: \n<color=\"yellow\">0/50</color>"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28f0c3942a3fef43af86aef77e37cf1, type: 3}
 --- !u!223 &2222298386710705880 stripped

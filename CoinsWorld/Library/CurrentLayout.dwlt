@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 883, y: 498}
+  m_MinSize: {x: 681, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 5514
+  controlID: 27
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1527
     height: 947
-  m_MinSize: {x: 606, y: 498}
+  m_MinSize: {x: 404, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 5489
+  controlID: 28
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1527
     height: 671
-  m_MinSize: {x: 606, y: 224}
-  m_MaxSize: {x: 6054, y: 4024}
+  m_MinSize: {x: 404, y: 224}
+  m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 5490
+  controlID: 29
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 430
     height: 671
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -210,14 +210,14 @@ MonoBehaviour:
     y: 0
     width: 1097
     height: 671
-  m_MinSize: {x: 404, y: 124}
-  m_MaxSize: {x: 2052, y: 2072}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
   - {fileID: 15}
-  m_Selected: 2
+  m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
@@ -383,7 +383,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 76ecfbff90ecfbff8eeefbffa279fcffc279fcffc07bfcff1cf9ffff6cfbffffd4fbffff447f0000
+      m_ExpandedIDs: 84cdffffa4cdffffa6cfffffa8fbffffb8fbffffba1b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -551,20 +551,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio/Coins
+    - Assets/Scripts/Coin
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio/Coins
+  - Assets/Scripts/Coin
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\avega\Documents\Developer\Unity\CoinsWorld
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 7c8a0000
-    m_LastClickedID: 35452
-    m_ExpandedIDs: 00000000b00b0000240c0000960c0000a60c00003e0d0000640d00003c0e0000480f000046110000581100008a1100006c1200000a130000d813000088140000f21400004c16000094160000c2160000d2160000681700009017000074180000921800002619000050190000786c0000448a0000
+    scrollPos: {x: 0, y: 37}
+    m_SelectedIDs: 64160000
+    m_LastClickedID: 5732
+    m_ExpandedIDs: 00000000fc0b0000720c0000e40c0000f60c0000980d0000be0d0000a60e0000bc0f0000ce110000e01100001412000002130000a81300007a140000321500009c15000008170000521700008417000094170000581800003e190000601900006a190000001a00002e1a0000703d0000723d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -592,7 +592,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b00b0000240c0000960c0000a60c00003e0d0000640d00003c0e0000480f000046110000581100008a1100006c1200000a130000d813000088140000f21400004c16000094160000c2160000d21600009017000074180000921800002619000050190000
+    m_ExpandedIDs: 00000000fc0b0000720c0000e40c0000f60c0000980d0000be0d0000a60e0000bc0f0000ce110000e01100001412000002130000a81300007a140000321500009c150000081700005217000084170000941700002e180000581800003e19000060190000001a00002e1a0000703d0000723d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,7 +644,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 267}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 568
 --- !u!114 &17
