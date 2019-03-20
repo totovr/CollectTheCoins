@@ -11,7 +11,10 @@ public enum SerialPortConnection
     COM7,
     COM8,
     COM9,
-    COM10
+    COM10,
+    COM11,
+    COM12,
+    COM13
 }
 
 public enum BaudRateValue

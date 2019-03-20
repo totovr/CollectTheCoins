@@ -9,7 +9,10 @@ public class BulletBar : MonoBehaviour
     private GameObject reloadObjectBar;
     private RectTransform reloadBar;
     private Image imageColor;
+
+    private GameObject reloadTextObject;
     private Text reloadText;
+    private RectTransform reloadBarTextTransform;
 
     private Image backGroundColor;
 
@@ -30,10 +33,13 @@ public class BulletBar : MonoBehaviour
         reloadObjectBar = GameObject.FindGameObjectWithTag("ReloadBarAnimation");
         reloadBar = reloadObjectBar.GetComponent<RectTransform>();
         imageColor = reloadObjectBar.GetComponent<Image>();
-        reloadText = GameObject.FindGameObjectWithTag("ReloadText").GetComponent<Text>();
-        bulletReduce = maxBullets;
-
         backGroundColor = GetComponent<Image>();
+
+        reloadTextObject = GameObject.FindGameObjectWithTag("ReloadText");
+        reloadText = reloadTextObject.GetComponent<Text>();
+        reloadBarTextTransform = reloadTextObject.GetComponent<RectTransform>();
+
+        bulletReduce = maxBullets;
 
         colorFucsia = new Color32(200, 86, 104, 255);
         colorPurple = new Color32(132, 86, 200, 255);
@@ -45,7 +51,7 @@ public class BulletBar : MonoBehaviour
     void UpdateReloadBar(float _hitDamage)
     {
         bullets -= 1;
-        Debug.Log(bullets);
+        // Debug.Log(bullets);
 
         if (bullets > 3)
         {
@@ -66,6 +72,7 @@ public class BulletBar : MonoBehaviour
         if (bullets == 0)
         {
             reloadText.text = IntToString(_hitDamage);
+            reloadBarTextTransform.transform.eulerAngles = new Vector3(0, 0, 90);
             reloadText.text = Reloading();
             backGroundColor.color = colorRed; 
         }
@@ -94,5 +101,6 @@ public class BulletBar : MonoBehaviour
         reloadText.text = originalTextLife;
         imageColor.color = colorFucsia;
         backGroundColor.color = new Color(255, 255, 255, 255);
+        reloadBarTextTransform.transform.eulerAngles = new Vector3(0, 0, 0);
     }
 }

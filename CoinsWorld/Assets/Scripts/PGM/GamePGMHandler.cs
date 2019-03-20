@@ -56,6 +56,18 @@ public class GamePGMHandler : MonoBehaviour
         {
             _portName = "\\\\.\\COM10";
         }
+        else if (port == SerialPortConnection.COM11)
+        {
+            _portName = "\\\\.\\COM11";
+        }
+        else if (port == SerialPortConnection.COM12)
+        {
+            _portName = "\\\\.\\COM12";
+        }
+        else if (port == SerialPortConnection.COM13)
+        {
+            _portName = "\\\\.\\COM13";
+        }
 
         return _portName;
 

@@ -10,12 +10,12 @@ public class HitPlayer : MonoBehaviour
 
     EffectSoundsManager effectSoundsManager;
 
-    // GamePGMController pgmControl;
+    GamePGMController pgmControl;
 
     void Start()
     {
         effectSoundsManager = GetComponent<EffectSoundsManager>();
-        // pgmControl = GetComponent<GamePGMController>();
+        pgmControl = GetComponent<GamePGMController>();
     }
 
     void OnTriggerEnter(Collider collider)
@@ -25,7 +25,7 @@ public class HitPlayer : MonoBehaviour
 
             if (playerLivesCounter <= playerLifes)
             {
-                // pgmControl.EnemyOneActuation();
+                pgmControl.EnemyOneActuation();
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken);
                 effectSoundsManager.PlayerReceivedDamaged();
             }
@@ -44,7 +44,7 @@ public class HitPlayer : MonoBehaviour
 
             if (playerLivesCounter <= playerLifes)
             {
-                // pgmControl.EnemyTwoActuation();
+                pgmControl.EnemyTwoActuation();
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken * 4);
                 effectSoundsManager.PlayerReceivedDamaged();
             }
