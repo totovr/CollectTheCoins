@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
     public Canvas gameOverCanvas;
     public Canvas gameWonCanvas;
 
-    public bool theGameStart = false; // this is used to start the coins
-    public bool thePlayerWon = false;
+    [HideInInspector]
+    public bool theGameStart = false, thePlayerWon = false; // this is used to stop the timer 
 
     void Awake()
     {
@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     {
         theGameStart = false;
         GameObject.FindGameObjectWithTag("HealthBar").SendMessage("ResetTheHealthBar");
+        GameObject.FindGameObjectWithTag("ReloadBar").SendMessage("ResetTheReloadBar");
         ChangeGameState(GameState.gameOver);
     }
 

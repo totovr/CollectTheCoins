@@ -14,13 +14,14 @@ TagManager:
   - HealthBar
   - LifeText
   - HealthBarAnimation
-  - EnemyMesh
   - AllTheEnemies
   - PlayerBullet
   - Ghost
   - Terrain
-  - Three
   - EnemyTwoBullet
+  - ReloadText
+  - ReloadBarAnimation
+  - ReloadBar
   layers:
   - Default
   - TransparentFX

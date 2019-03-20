@@ -14,14 +14,14 @@ public class UICountDown : MonoBehaviour
 
     public int GameTime = 60;
 
-    private Text _countDownText;
+    private Text countDownText;
 
     private GameObject player;
     private FirstPersonController characterControllerScript;
     private AudioSource playerAudio;
 
-    private float _countDownTimerDuration;
-    private float _countDownTimerStartTime;
+    private float countDownTimerDuration;
+    private float countDownTimerStartTime;
 
     string timerMessage;
     int timeLeft;
@@ -39,7 +39,7 @@ public class UICountDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _countDownText = GetComponent<Text>();
+        countDownText = GetComponent<Text>();
 
         player = GameObject.FindGameObjectWithTag("PlayerFPS");
         characterControllerScript = player.GetComponent<FirstPersonController>();
@@ -70,7 +70,7 @@ public class UICountDown : MonoBehaviour
             // This is to add time if the player collect or kill some enemy
             if (TimerBonus > 0)
             {
-                _countDownTimerStartTime += TimerBonus;
+                countDownTimerStartTime += TimerBonus;
                 TimerBonus = 0; // reset the variable or it will generate a bug
             }
 
@@ -88,22 +88,22 @@ public class UICountDown : MonoBehaviour
                 Debug.Log("The game is finished"); 
             }
 
-            _countDownText.text = timerMessage;
+            countDownText.text = timerMessage;
         }
     }
 
     // This will setup the timing 
     void SetUpCountDownTimer(float DelayInSeconds)
     {
-        _countDownTimerDuration = DelayInSeconds;
-        _countDownTimerStartTime = Time.time;
+        countDownTimerDuration = DelayInSeconds;
+        countDownTimerStartTime = Time.time;
     }
 
     private float CountDownTimeRemaning()
     {
-        float _elapsedSeconds = Time.time - _countDownTimerStartTime;
-        float _timeLeft = _countDownTimerDuration - _elapsedSeconds;
-        return _timeLeft;
+        float elapsedSeconds = Time.time - countDownTimerStartTime;
+        float timeLeft = countDownTimerDuration - elapsedSeconds;
+        return timeLeft;
     }
 
     string LeadingZero(int n)

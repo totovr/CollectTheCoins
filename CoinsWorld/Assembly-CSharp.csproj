@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\PGM\GamePGMController.cs" />
      <Compile Include="Assets\Scripts\PGM\GamePGMHandler.cs" />
      <Compile Include="Assets\Scripts\PGM\SerialConfig.cs" />
+     <Compile Include="Assets\Scripts\Player\BulletBar.cs" />
      <Compile Include="Assets\Scripts\Player\BulletGenerator.cs" />
      <Compile Include="Assets\Scripts\Player\DestroyBullet.cs" />
      <Compile Include="Assets\Scripts\Player\HealthBar.cs" />

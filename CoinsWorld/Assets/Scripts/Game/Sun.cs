@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Sun : MonoBehaviour
 {
-    GameObject worldLight;
-    private Transform _sunTransform;
+    // GameObject worldLight;
+    private Transform sunTransform;
 
     // string hour;
     string minutes;
@@ -15,8 +15,8 @@ public class Sun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        worldLight = GameObject.FindGameObjectWithTag("WorldLight");
-        _sunTransform = worldLight.GetComponent<Transform>();
+        // worldLight = GameObject.FindGameObjectWithTag("WorldLight");
+        sunTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class Sun : MonoBehaviour
         minutes = LeadingZero(Now.Minute);
         seconds = LeadingZero(Now.Second);
 
-        _sunTransform.transform.eulerAngles = new Vector3(6 * Now.Minute + Now.Second / 10.0f, 0, 0);
+        sunTransform.transform.eulerAngles = new Vector3(6 * Now.Minute + Now.Second / 10.0f, 0, 0);
     }
 
     string LeadingZero(int n)
