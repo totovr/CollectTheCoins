@@ -38,7 +38,7 @@ public class BulletBar : MonoBehaviour
         colorFucsia = new Color32(200, 86, 104, 255);
         colorPurple = new Color32(132, 86, 200, 255);
         colorOrange = new Color32(200, 139, 80, 255);
-        colorRed = new Color(200, 86, 104, 255);
+        colorRed = new Color32(255, 0, 0, 255);
     }
 
     // This will be called if the user was hit
@@ -93,5 +93,6 @@ public class BulletBar : MonoBehaviour
         reloadBar.localScale = new Vector3(maxBullets, 1, 1);
         reloadText.text = originalTextLife;
         imageColor.color = colorFucsia;
+        backGroundColor.color = new Color(255, 255, 255, 255);
     }
 }

@@ -12,7 +12,7 @@ public class InputController : MonoBehaviour {
     private float bulletDamage = 0.2f;
     private bool playerReloading = false;
     private int bulletCounter = 0;
-    private float bulletReloadDelay = 3.0f;
+    private float bulletReloadDelay = 2.0f;
     private float countDownTimerStartTime;
 
     void Start()
