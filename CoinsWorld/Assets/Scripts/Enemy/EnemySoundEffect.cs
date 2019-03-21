@@ -9,24 +9,26 @@ public class EnemySoundEffect : MonoBehaviour
 
     private AudioSource effectsAudioSource;
 
-    int randomNumber;
+    int randomNumberKill;
+    int randomNumberShoot;
 
     // Start is called before the first frame update
     void Start()
     {
         effectsAudioSource = gameObject.AddComponent<AudioSource>();
+        randomNumberShoot = Random.Range(0, 3);
+        randomNumberKill = Random.Range(0, 4);
     }
 
     public void EnemyShooted()
     {
-        effectsAudioSource.clip = ShootAudio[0];
+        effectsAudioSource.clip = ShootAudio[randomNumberShoot];
         effectsAudioSource.Play();
     }
 
     public void EnemyKilled()
     {
-        int rand = Random.Range(0, 4);
-        effectsAudioSource.clip = KilledAudio[rand];
+        effectsAudioSource.clip = KilledAudio[randomNumberKill];
         effectsAudioSource.Play();
     }
 }

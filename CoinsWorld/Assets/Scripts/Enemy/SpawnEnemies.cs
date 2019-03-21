@@ -29,7 +29,7 @@ public class SpawnEnemies : MonoBehaviour
         TerrainTop = TerrainBottom + TerrainLenght;
 
         InstantiateRandomPosition("StoneMonster", numberOfEnemyOne, 2f);
-        InstantiateRandomPosition("Ghost_Brown", numberOfEnemyTwo, 8f);
+        InstantiateRandomPosition("Ghost_Brown", numberOfEnemyTwo, 15f);
 
         GlobalStaticVariables.totalEnemyCounter = numberOfEnemyOne + numberOfEnemyTwo;
 

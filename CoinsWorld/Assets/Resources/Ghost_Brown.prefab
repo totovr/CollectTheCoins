@@ -372,7 +372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820021780196580}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 4485386103032562}
@@ -411,7 +411,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025010487, y: 0.02323891, z: 0.01}
+  m_Size: {x: 0.03, y: 0.03, z: 0.01}
   m_Center: {x: 0.00031372785, y: 0.008727714, z: 0}
 --- !u!114 &114587239225918310
 MonoBehaviour:
@@ -434,8 +434,6 @@ MonoBehaviour:
   retreatDistance: 3
   rotate_speed: 5
   startTimeBtwShots: 0.5
-  shootSE: {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
-  deadSE: {fileID: 8300000, guid: a4bc29ad31a0a28449a15c913c0b87ee, type: 3}
 --- !u!114 &589746088454557454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +472,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootAudio:
   - {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
+  - {fileID: 8300000, guid: ef370672c9b9c4fbdae838bbd2d7175a, type: 3}
+  - {fileID: 8300000, guid: 0a8027dbceb4d47c4bdad316eb99a9d8, type: 3}
+  - {fileID: 8300000, guid: b5df16dd84bf34042bfd9ea4b4a0dbcb, type: 3}
   KilledAudio:
   - {fileID: 8300000, guid: 0d3def65994b84d04b8791e02beb2391, type: 3}
   - {fileID: 8300000, guid: 3a20c1f2fd4d44c4d9a6fabbec93be20, type: 3}

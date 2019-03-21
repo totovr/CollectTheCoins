@@ -101,7 +101,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 40
   m_Center: {x: -0.000000034667814, y: 0.14399323, z: 0.55475426}
 --- !u!114 &6945057678585935489
 MonoBehaviour:
@@ -486,6 +486,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootAudio:
   - {fileID: 8300000, guid: 2cafbef4b5c04dc41a3afb8b27ef3b1f, type: 3}
+  - {fileID: 8300000, guid: ef370672c9b9c4fbdae838bbd2d7175a, type: 3}
+  - {fileID: 8300000, guid: 0a8027dbceb4d47c4bdad316eb99a9d8, type: 3}
+  - {fileID: 8300000, guid: b5df16dd84bf34042bfd9ea4b4a0dbcb, type: 3}
   KilledAudio:
   - {fileID: 8300000, guid: 0d3def65994b84d04b8791e02beb2391, type: 3}
   - {fileID: 8300000, guid: 3a20c1f2fd4d44c4d9a6fabbec93be20, type: 3}

@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3000827005268282202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa3367113d869d44db644f115581a669, type: 2}
+  - {fileID: 2100000, guid: e7d9841a7b8f285479356e245bda5e36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +91,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.65
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7157521230487010077
 Rigidbody:
@@ -108,7 +108,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &9188507286038679842
 MonoBehaviour:
   m_ObjectHideFlags: 0

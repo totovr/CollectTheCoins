@@ -41,17 +41,19 @@ public class EnemyController : MonoBehaviour
         Destroy(bulletInstance, 3f);
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerExit(Collider collider)
     {
         if (collider.CompareTag("PlayerBullet") || GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            // Debug.Log("Enemy shooted");
+            // Debug.Log("Enemy shooted stone");
             enemyAnimator.EnemyIsDeath();
+
             if (disableTheShootedSound)
             {
                 // audioSource.PlayOneShot(deadSE);
                 enemySound.EnemyKilled();
             }
+
             disableTheShootedSound = false;
             notShooted = false;
 

@@ -43,16 +43,18 @@ public class EnemyNotStaticController : MonoBehaviour
         Destroy(bulletInstance, 3f);
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerExit(Collider collider)
     {
         if (collider.CompareTag("PlayerBullet") || GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         {
-            enemyAnimatorPositions.EnemyIsDeath();
+            // Debug.Log("Enemy shooted ghost");
+            enemyAnimatorPositions.EnemyIsDeath(); // The enemy animation change to killed
+
             if (disableTheShootedSound)
             {
-                //audioSource.PlayOneShot(deadSE);
                 enemySound.EnemyKilled();
             }
+
             disableTheShootedSound = false;
             notShooted = false;
 

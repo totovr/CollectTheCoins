@@ -9,7 +9,7 @@ public class BulletGenerator : MonoBehaviour
 
     private string bulletResource = "Bullet";
 
-    private float bulletSpeed = 5000;
+    private float bulletSpeed = 2500;
 
     void Start()
     {
